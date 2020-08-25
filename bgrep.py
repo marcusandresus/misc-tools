@@ -40,10 +40,11 @@ def main():
     parser.add_argument("--asciicodes", action="store_const", const="True", help="Pattern as list of hex ascii codes")
     parser.add_argument("pattern", metavar="PATTERN", help="Pattern to search")
     parser.add_argument("file", metavar="FILE", help="File to search")
-    # test_list = ["--asciicodes", "1F 8B 08", "Certificado20160427marco.pdf"]
-    # test_list = ["AAAAA", "Certificado20160427marco.pdf"]
-    test_list = ["--asciicodes", "1F 8B 08", "comprobante_ausencia_20190128_a_20190208.print.pdf"]
-    args = parser.parse_args(test_list)
+    # test_list = ["--asciicodes", "1F 8B 08", "file1.dat"]
+    # test_list = ["AAAAA", "file2.dat"]
+    # test_list = ["--asciicodes", "1F 8B 08", "file3.dat"]
+    # args = parser.parse_args(test_list)
+    args = parser.parse_args()
 
     pattern = bytes()
     if args.asciicodes:
